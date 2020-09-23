@@ -1,0 +1,54 @@
+VB Control Manager History
+==========================
+
+Version 1.05 (November 14, 2003)
+--------------------------------
+Four minor bugs fixed:
+* VB Control Mananger won't run in MDI child form when the form is shown in the same time when the application start. Thanks to Paul Caton (paul_caton@hotmail.com) for the project test that produce this bug.
+* Splitters could not reach their minimum or maximum value in fast mouse movement. Thanks to Carles P.V. (carles_pv@terra.es) for this bug info.
+* Title bars are not refreshed when their control size become smaller. Thanks to Carles P.V. (carles_pv@terra.es) for this bug info.
+* Right-click the close button will close the control. Thanks to umairata (umairata@hotmail.com) for this bug info.
+
+Version 1.01 (November 6, 2003)
+-------------------------------
+A tiny bug fixed. The default size of the splitter should be 4 in pixel, not 4 in twips.
+
+Version 1.00 (November 3, 2003)
+-------------------------------
+* Added more than 3500 lines of code
+* Added move control features
+* Added show and hide control features
+* Automatically call Activate method when the control is activated (developers now don't have to add any codes in their from to make VB Control Manager activated)
+* Added 3 properties: TitleBar_CloseVisible, TitleBar_Height and TitleBar_Visible
+* Added 3 methods: CloseControl, MoveControl and OpenControl
+* Added 11 events: ControlAfterClose, ControlBeforeClose, ControlMove, ControlMoveBegin, ControlMoveEnd, SplitterMoveBegin, TitleBarClick, TitleBarDblClick, TitleBarMouseDown, TitleBarMouseMove and TitleBarMouseUp
+* Made Controls collection and Splitters collection become public
+* Added 5 properties to Controls collection: Closed, Name, TitleBar_CloseVIsible, TitleBar_height and TitleBar_Visible
+* Added 5 error handlers: Error on resizing a splitter, error on moving a control because of there is not enough room to drop the control, invalid control id, invalid splitter id and error on moving a control because of the control is closed
+
+VB Splitter Version 1.01 (September 16, 2003)
+---------------------------------------------
+Bugs fixed on pressing Alt+Tab, Ctrl+Esc or Ctrl+Alt+Del while moving the splitter. Thanks to Vlad Vissoultchev (wqw@bora.exco.net) for this bug info.
+
+VB Splitter Version 1.00 (September 10, 2003)
+---------------------------------------------
+* Initial creation
+* Designs Controls.RemoveHeaps algorithm (18-20 August 2003)
+* Implements Controls.RemoveHeaps algorithm (20 AUgust 2003)
+* Designs Controls.Compact and Controls.Stretch algorithm (21-22 August 2003)
+* Implements Controls.Compact and Controls.Stretch algorithm (22 August 2003)
+* Designs Controls.RemoveHoles algorithm (23-24 August 2003)
+* Implements Controls.RemoveHoles algorithm (24 August 2003)
+* Designs VB Splitter Controls object model: Controls collection, Splitters Collection and Ids Collection (25-27 August 2003)
+* Implements VB Splitter Controls object model: Controls collection, Splitters Collection and Ids Collection (28-29 August 2003)
+* Designs Splitters.Add algorithm (30-31 August 2003)
+* Implements Splitters.Add algorithm (1 September 2003)
+* Merges all agorithms above in procedure BuildSplitter (2 September 2003)
+* Implements MoveSplitters and Activate methods (3 Septebmer 2003)
+* Build several error handlers (3 September 2003)
+* Implements properties: Size, BackColor, ActiveColor, Enable, ClipCursor (4 September 2003)
+* Implements properties: LiveUpdate, FillContainer, MarginBottom, MarginLeft, MarginRight, MarginTop (5 September 2003)
+* Refines the codes (6 September 2003)
+* Tests and debugs (7 September 2003)
+* Adds comments and refines the codes (8-10 September 2003)
+* Implements demo project (10-12 September 2003)

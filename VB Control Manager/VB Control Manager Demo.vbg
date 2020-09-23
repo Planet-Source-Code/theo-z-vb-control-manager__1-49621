@@ -1,0 +1,4 @@
+VBGROUP 5.0
+StartupProject=Demo Project Source\VB Control Manager Demo.vbp
+Project=ActiveX Control Source\VB Control Manager.vbp
+Project=ActiveX Control Source\SubTimer6\SubTimer6.vbp
