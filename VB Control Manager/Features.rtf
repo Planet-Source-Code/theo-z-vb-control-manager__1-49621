@@ -1,0 +1,412 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fswiss\fprq2 Verdana;}{\f1\fswiss\fprq2\fcharset0 Verdana;}{\f2\froman\fprq2 Times New Roman;}}
+{\colortbl ;\red153\green51\blue0;\red255\green102\blue0;\red128\green128\blue128;\red0\green0\blue0;\red0\green0\blue128;}
+\viewkind4\uc1\pard\qc\cf1\b\f0\fs22 VB Control Manager\par
+\cf2\i\fs20 Features\par
+\pard\cf3\b0\i0\fs18\par
+\cf4\fs16\par
+\cf5\b Introduction\par
+\cf4\b0 VB \lang1033\f1 Control Manager\lang1046\f0  is an ActiveX control to allow the user \lang1033\f1 to dock controls and \lang1046\f0 resize\lang1033\f1 , move and show/hide\lang1046\f0  \lang1033\f1 them\lang1046\f0  at run-time.\par
+This form demonstrates VB \lang1033\f1 Control Manager\lang1046\f0 's properties, methods\lang1033\f1 ,\lang1046\f0  events\lang1033\f1  and its two collection properties.\lang1046\f0\par
+\cf5\b\par
+Properties\par
+\pard\fi-360\li360\tx360\cf4\b0\par
+1.\tab\b ActiveColor\par
+\b0\tab Returns/sets the background color used to display \lang1033\f1 a splitter\lang1046\f0  when the user moves it in none live update mode.\par
+\par
+2.\tab\b BackColor\par
+\b0\tab Returns/sets the background color used to display \lang1033\f1 all \lang1046\f0 splitters.\par
+\par
+3.\tab\b ClipCursor\b0\par
+\tab Returns/sets a value that determines whether the mouse pointer is confined to\lang1033\f1  the virtual splitter \lang1046\f0 minimum and maximum x- and y-coordinate when the user moves \lang1033\f1 a\lang1046\f0  splitter.\par
+\par
+4.\tab\b Enable\b0\par
+\tab Returns/sets a value that determines whether \lang1033\f1 all\lang1046\f0  splitters \lang1033\f1 are\lang1046\f0  movable.\par
+\par
+5.\tab\b Fill Container\b0\par
+\tab Returns/sets a value that determines whether the \lang1033\f1 ActiveX C\lang1046\f0 ontrol \lang1033\f1 (along with all controls inside it) \lang1046\f0 will automatically adjust its size to fill-up its container with respect to the margin properties.\par
+\par
+6.\tab\b LiveUpdate\b0\par
+\tab Returns/sets a value that determines whether the controls should be resized as \lang1033\f1 a\lang1046\f0  splitter is moved.\par
+\par
+7.\tab\b MarginBottom\b0\par
+\tab Returns/sets the bottom margin of the \lang1033\f1 ActiveX C\lang1046\f0 ontrol from its container.\par
+\par
+8.\tab\b MarginLeft\b0\par
+\tab Returns/sets the left margin of the \lang1033\f1 ActiveX C\lang1046\f0 ontrol from its container.\par
+\par
+9.\tab\b MarginRight\b0\par
+\tab Returns/sets the right margin of the \lang1033\f1 ActiveX C\lang1046\f0 ontrol from its container.\par
+\par
+10.\tab\b MarginTop\b0\par
+\tab Returns/sets the top margin of the \lang1033\f1 ActiveX C\lang1046\f0 ontrol from its container.\par
+\par
+11.\tab\b Size\b0\par
+\tab Returns/sets the size of \lang1033\f1 all\lang1046\f0  splitters.\par
+\par
+1\lang1033\f1 2\lang1046\f0 .\tab\lang1033\b\f1 TitleBar_CloseVisible\lang1046\b0\f0\par
+\tab\lang1033\f1 Returns/s\lang1046\f0 ets a value that determines whether a close button in \lang1033\f1 all\lang1046\f0  \lang1033\f1 control \lang1046\f0 title\lang1033\f1  \lang1046\f0 bar\lang1033\f1 s\lang1046\f0  is visible\lang1033\f1 .\lang1046\f0\par
+\par
+1\lang1033\f1 3\lang1046\f0 .\tab\lang1033\b\f1 TitleBar_Height\lang1046\b0\f0\par
+\tab\lang1033\f1 Returns/sets the height of all control title bars.\lang1046\f0\par
+\par
+1\lang1033\f1 4\lang1046\f0 .\tab\lang1033\b\f1 TitleBar_Visible\lang1046\b0\f0\par
+\tab\lang1033\f1 Returns/sets a value that determines whether all control title bars are visible.\lang1046\f0\par
+\pard\cf5\b\par
+Methods\par
+\pard\fi-360\li360\tx360\cf4\b0\par
+1.\tab\lang1033\b\f1 CloseControl\lang1046\f0\par
+\b0\tab Closes (hide\lang1033\f1 s\lang1046\f0 ) a control\lang1033\f1 .\lang1046\f0\par
+\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\tab Syntax\tab :\tab\i Object\i0 .\lang1033\b\f1 CloseControl \b0\i IdControl [, Success]\lang1046\b\i0\f0\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\i0  \lang1033\f1\tab\lang1046\f0 -\tab\lang1033\f1 Required. \lang1046\f0 An object expression that evaluates to a VB \lang1033\f1 Control Manager \lang1046\f0 object.\par
+\lang1033\f1\tab\tab\tab\i IdControl\i0\tab -\tab Required. A value that uniquely identifies the control the developer want to close.\par
+\tab\tab\tab\i Success\i0\tab -\tab Optional. A returned value that determines whether the Close method is successful.\lang1046\f0\par
+\pard\fi-360\li360\tx360\par
+\lang1033\f1 2\lang1046\f0 .\tab\lang1033\b\f1 MoveControl\lang1046\f0\par
+\b0\tab\lang1033\f1 Moves\lang1046\f0  a control\lang1033\f1  to certain area.\lang1046\f0\par
+\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\tab Syntax\tab :\tab\i Object\i0 .\lang1033\b\f1 MoveControl \b0\i IdControlSource, MoveTo [, IdControlDestination, IdSplitterDestination, Success]\lang1046\b\i0\f0\par
+\pard\fi-2970\li3330\tx1080\tx1260\tx3150\tx3330\b0 Parts\tab :\tab\i Object\i0  \lang1033\f1\tab\lang1046\f0 -\tab\lang1033\f1 Required. \lang1046\f0 An object expression that evaluates to a VB \lang1033\f1 Control Manager \lang1046\f0 object.\par
+\lang1033\f1\tab\tab\i IdControlSource\i0\tab -\tab Required. A value that uniquely identifies the source control the developer want to move.\par
+\tab\tab\i MoveTo\i0\tab -\tab Required. A value indicating the area type where the source control will be moved to.\par
+\tab\tab\i IdControlDestination\tab\i0 -\tab Required only if the area type indicated by \i MoveTo\i0  is a control. A value that uniquely identifies the destination control the developer want to move the source control to.\i\par
+\tab\tab IdSplitterDestination\i0\tab -\tab Required only if the are type indicated by \i MoveTo\i0  is a splitter. A value that uniquely identifies the splitter the developer want to move the source control to.\par
+\tab\tab\i Success\i0\tab -\tab Optional. A returned value that determines whether the MoveControl method is successful.\par
+\pard\fi-360\li360\tx360\lang1046\f0\par
+\lang1033\f1 3\lang1046\f0 .\tab\b MoveSplitter\par
+\b0\tab Move\lang1033\f1 s\lang1046\f0  a splitter to the specified x- or y- (depending on \lang1033\f1 the splitter's\lang1046\f0  Orientation property) coordinate.\par
+\pard\fi-360\li360\tx360\tx1080\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\tab Syntax\tab :\tab\i Object\i0 .\b MoveSplitter\b0\i  IdSplitter\i0 ,\i  MoveTo\b\i0\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab\lang1033\f1 Required. \lang1046\f0 An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i IdSplitter\tab -\tab\lang1033\i0\f1 Required. \lang1046\f0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  splitter\lang1033\f1  the developer want to move\lang1046\f0 .\par
+\tab\tab  \tab\i MoveTo\tab\i0 -\tab An \lang1033\f1 integer value that specifies the \lang1046\f0 x- or y- coordinate (depending on \lang1033\f1 the splitter's\lang1046\f0  Orientation property)\lang1033\f1  \lang1046\f0 where the splitter will be moved.\par
+\pard\fi-360\li360\tx360\par
+\lang1033\f1 4\lang1046\f0 .\tab\lang1033\b\f1 OpenControl\lang1046\f0\par
+\b0\tab Opens \lang1033\f1 (shows) a control and docks it to the ActiveX Control\lang1046\f0 .\par
+\pard\fi-360\li360\tx360\tx1080\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\tab Syntax\tab :\tab\i Object\i0 .\lang1033\b\f1 OpenControl\b0  \i IdControl [, MaintainSize, Success]\lang1046\b\i0\f0\par
+\pard\fi-2610\li2610\tx360\tx1080\tx1260\tx2430\tx2610\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab\lang1033\f1 Required. \lang1046\f0 An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\lang1033\i\f1 IdControl\lang1046\f0\tab -\tab\lang1033\i0\f1 Required. \lang1046\f0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  \lang1033\f1 control the developer want to open\lang1046\f0 .\par
+\lang1033\f1\tab\tab\tab\i MaintainSize\i0\tab -\tab Optional. A value that determines whether the method will not change the size and position of the control the developer want to open. The default value is \i false\i0 .\lang1046\f0\par
+\lang1033\f1\tab\tab\tab\i Success\tab\i0 -\tab Optional. A returned value that determines whether the OpenControl method is successful.\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\par
+\pard\cf5\lang1046\b\f0 Events\par
+\pard\fi-360\li360\tx360\cf4\b0\par
+1.\tab\b ControlAfterClose\par
+\b0\tab Occurs when a control has\lang1033\f1  just\lang1046\f0  been closed by the user.\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _ControlAfterClose(ByVal \i Id\lang1033\f1 Control\lang1046\i0\f0  As Long)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i Id\lang1033\f1 Control\lang1046\f0\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the control that has just been closed by the user.\lang1046\f0\par
+\par
+\pard\fi-360\li360\tx360 2.\tab\b ControlBeforeClose\par
+\b0\tab Occurs \lang1033\f1 after \lang1046\f0 the user \lang1033\f1 presses a close button of certain control and before the control is closed.\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _ControlBeforeClose(ByVal \i Id\lang1033\f1 Control\lang1046\i0\f0  As Long\lang1033\f1 , \i Cancel\i0  as Boolean\lang1046\f0 )\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i Id\lang1033\f1 Control\lang1046\f0\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the control that about to be closed.\par
+\tab\tab\tab\i Cancel\i0\tab -\tab A boolean. Setting this argument to \i true\i0  stops the control from closing.\lang1046\f0\par
+\par
+\pard\fi-360\li360\tx360 3.\tab\b ControlMove\par
+\b0\tab Occurs when the user is moving a control.\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 ControlMove\lang1046\f0 (ByVal \i IdControl\i0  As Long, ByVal \i Shift\i0  As Integer, ByVal \i Left\i0  As Long, ByVal \i Top\i0  As Long, ByVal \i Width\i0  As Long, ByVal \i Height\i0  As Long)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i Id\lang1033\f1 Control\lang1046\f0\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the control that is being moved by the user.\par
+\tab\tab\tab\i Shift\i0\tab -\tab An integer that corresponds to the state of the SHIFT, CTRL, and ALT keys.\par
+\tab\tab\tab\i Left\i0\tab -\tab An integer indicating the x-coordinate for the left edge of the current position of the rectangle that represents the moving control.\par
+\tab\tab\tab\i Top\i0\tab -\tab An integer indicating the y-coordinate for the top edge of the current position of the rectangle that represents the moving control.\par
+\tab\tab\tab\i Width\i0\tab -\tab An integer indicating the current width of the rectangle that represents the moving control.\par
+\tab\tab\tab\i Height\i0\tab -\tab An integer indicating the current height of the rectangle that represents the moving control.\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\lang1046\f0\tab\tab\tab\par
+\pard\fi-360\li360\tx360 4.\tab\b ControlMoveBegin\par
+\b0\tab Occurs when the user \lang1033\f1 is about to move a control, i.e. the first time the rectangle that represents the moving control occurs.\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 ControlMoveBegin\lang1046\f0 (ByVal \i Id\lang1033\f1 Control\lang1046\i0\f0  As Long, ByVal \i Shift\i0  As Integer)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i Id\lang1033\f1 Control\lang1046\f0\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  \lang1033\f1 control that is about to be moved by the user\lang1046\f0 .\par
+\lang1033\f1\tab\tab\tab\i Shift\i0\tab -\tab An integer that corresponds to the state of the SHIFT, CTRL, and ALT keys.\par
+\par
+\pard\fi-360\li360\tx360\lang1046\f0 5.\tab\b ControlMoveEnd\par
+\b0\tab Occurs when the user \lang1033\f1 is finished moving a control, i.e. when the rectangle that represents the moving control disappears.\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 ControlMoveEnd\lang1046\f0 (ByVal \i Id\lang1033\f1 Control\lang1046\i0\f0  As Long, ByVal \i Shift\i0  As Integer, ByVal \lang1033\i\f1 Moved\i0  As Boolean\lang1046\f0 )\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i Id\lang1033\f1 Control\lang1046\f0\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the control that has just been moved by the user\lang1046\f0 .\par
+\lang1033\f1\tab\tab\tab\i Shift\i0\tab -\tab An integer that corresponds to the state of the SHIFT, CTRL, and ALT keys.\par
+\tab\tab\tab\i Moved\i0\tab -\tab A value that determines whether the control is moved.\par
+\lang1046\f0\par
+\pard\fi-360\li360\tx360 6.\tab\b SplitterClick\par
+\b0\tab Occurs when the user presses and then realeses a mouse button over\lang1033\f1  \lang1046\f0 a splitter.\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterClick\lang1046\f0 (ByVal \i IdSplitter\i0  As Long)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i IdSplitter\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  splitter\lang1033\f1  that has just been clicked by the user\lang1046\f0 .\par
+\par
+\pard\fi-360\li360\tx360\lang1033\f1 7\lang1046\f0 .\tab\b SplitterDblClick\par
+\b0\tab Occurs when the user presses and then realeses a mouse button and\lang1033\f1  \lang1046\f0 then presses and releases it again over a splitter.\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterDblClick\lang1046\f0 (ByVal \i IdSplitter\i0  As Long)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i IdSplitter\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  splitter\lang1033\f1  that has just been double-clicked by the user\lang1046\f0 .\par
+\pard\fi-360\li360\tx360\par
+\lang1033\f1 8\lang1046\f0 .\tab\b Splitter\lang1033\f1 MouseDown\lang1046\f0\par
+\b0\tab Occurs when the user presses a mouse button over a splitter.\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterMouseDown\lang1046\f0 (ByVal \i IdSplitter\i0  As Long, \lang1033\f1 ByVal \i Button\i0  As Integer, \lang1046\f0 ByVal \i Shift\i0  As Integer, ByVal \i X\i0  As Single, ByVal \i Y\i0  As Single)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i IdSplitter\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  splitter\lang1033\f1  where the user presses a mouse button over\lang1046\f0 .\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\tab\tab\tab For other parts, see reference for Mouse\lang1033\f1 Down\lang1046\f0  event in MSDN\lang1033\f1  Library\lang1046\f0 .\par
+\pard\fi-360\li360\tx360\lang1033\f1\par
+9\lang1046\f0 .\tab\b Splitter\lang1033\f1 MouseMove\lang1046\f0\par
+\b0\tab Occurs when the user moves \lang1033\f1 a\lang1046\f0  mouse over a splitter without\lang1033\f1  \lang1046\f0 moving the splitter.\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterMouseMove\lang1046\f0 (ByVal \i IdSplitter\i0  As Long, \lang1033\f1 ByVal \i Button\i0  As Integer, \lang1046\f0 ByVal \i Shift\i0  As Integer, ByVal \i X\i0  As Single, ByVal \i Y\i0  As Single)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i IdSplitter\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  splitter\lang1033\f1  where the user moves a mouse over.\lang1046\f0\par
+\tab\tab\tab For other parts, see reference for Mouse\lang1033\f1 Move\lang1046\f0  event in MSDN\lang1033\f1  Library\lang1046\f0 .\par
+\par
+\pard\fi-360\li360\tx360\lang1033\f1 10\lang1046\f0 .\tab\b Splitter\lang1033\f1 MouseUp\lang1046\f0\par
+\b0\tab Occurs when the user releases a mouse button over a splitter\lang1033\f1  \lang1046\f0 without previously moving the splitter.\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterMouseUp\lang1046\f0 (ByVal \i IdSplitter\i0  As Long, \lang1033\f1 ByVal \i Button\i0  As Integer, \lang1046\f0 ByVal \i Shift\i0  As Integer, ByVal \i X\i0  As Single, ByVal \i Y\i0  As Single)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i IdSplitter\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  splitter\lang1033\f1  where the user releases a mouse button over.\lang1046\f0\par
+\tab\tab\tab For other parts, see reference for Mouse\lang1033\f1 Up\lang1046\f0  event in MSDN\lang1033\f1  Library\lang1046\f0 .\par
+\par
+\pard\fi-360\li360\tx360\lang1033\f1 11\lang1046\f0 .\tab\b Splitter\lang1033\f1 Move\lang1046\f0\par
+\b0\tab Occurs when the user is moving a splitter\lang1033\f1 .\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterMove\lang1046\f0 (ByVal \i IdSplitter\i0  As Long, ByVal \i Shift\i0  As Integer, ByVal \i X\i0  As Single, ByVal \i Y\i0  As Single)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i IdSplitter\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  splitter\lang1033\f1  that is being moved by the user.\lang1046\f0\par
+\tab\tab\tab For other parts, see reference for Mouse\lang1033\f1 Move\lang1046\f0  event in MSDN\lang1033\f1  Library\lang1046\f0 .\par
+\par
+\pard\fi-360\li360\tx360\lang1033\f1 12\lang1046\f0 .\tab\b Splitter\lang1033\f1 MoveBegin\lang1046\f0\par
+\b0\tab Occurs when the user is \lang1033\f1 about\lang1046\f0  to move a splitter\lang1033\f1 .\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterMoveBegin\lang1046\f0 (ByVal \i IdSplitter\i0  As Long, ByVal \i Shift\i0  As Integer, ByVal \i X\i0  As Single, ByVal \i Y\i0  As Single)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i IdSplitter\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  splitter\lang1033\f1  that is about to be moved by the user.\lang1046\f0\par
+\tab\tab\tab For other parts, see reference for Mouse\lang1033\f1 Down\lang1046\f0  event in MSDN\lang1033\f1  Library\lang1046\f0 .\par
+\par
+\pard\fi-360\li360\tx360\lang1033\f1 13\lang1046\f0 .\tab\b Splitter\lang1033\f1 MoveEnd\lang1046\f0\par
+\b0\tab Occurs when the user presses and then realeses a mouse button over\lang1033\f1  \lang1046\f0 a \lang1033\f1 control \lang1046\f0 title bar\lang1033\f1 .\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterMoveEnd\lang1046\f0 (ByVal \i IdSplitter\i0  As Long, ByVal \i Shift\i0  As Integer, ByVal \i X\i0  As Single, ByVal \i Y\i0  As Single)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i IdSplitter\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  splitter\lang1033\f1  that has just been moved by the user.\lang1046\f0\par
+\tab\tab\tab For other parts, see reference for Mouse\lang1033\f1 Down\lang1046\f0  event in MSDN\lang1033\f1  Library\lang1046\f0 .\par
+\par
+\pard\fi-360\li360\tx360\lang1033\f1 14\lang1046\f0 .\tab\b TitleBarClick\par
+\b0\tab Occurs when the user presses and then realeses a mouse button over\lang1033\f1  \lang1046\f0 a \lang1033\f1 control \lang1046\f0 title bar\lang1033\f1 .\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 TitleBarClick\lang1046\f0 (ByVal \i Id\lang1033\f1 Control\lang1046\i0\f0  As Long)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i Id\lang1033\f1 Control\lang1046\f0\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the control whose title bar has just been clicked by the user.\lang1046\f0\par
+\par
+\pard\fi-360\li360\tx360\lang1033\f1 15\lang1046\f0 .\tab\b TitleBar\lang1033\f1 Dbl\lang1046\f0 Click\par
+\b0\tab Occurs when the user presses and then realeses a mouse button and\lang1033\f1  \lang1046\f0 then presses and releases it again over a \lang1033\f1 control \lang1046\f0 title bar\lang1033\f1 .\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 TitleBarDblClick\lang1046\f0 (ByVal \i Id\lang1033\f1 Control\lang1046\i0\f0  As Long)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i Id\lang1033\f1 Control\lang1046\f0\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the control whose title bar has just been double-clicked by the user.\par
+\par
+\pard\fi-360\li360\tx360 16\lang1046\f0 .\tab\lang1033\b\f1 TitleBarMouseDown\lang1046\f0\par
+\b0\tab Occurs when the user presses a mouse button over a control title\lang1033\f1  \lang1046\f0 bar.\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterMouseDown\lang1046\f0 (ByVal \i Id\lang1033\f1 Control\lang1046\i0\f0  As Long, \lang1033\f1 ByVal \i Button\i0  As Integer, \lang1046\f0 ByVal \i Shift\i0  As Integer, ByVal \i X\i0  As Single, ByVal \i Y\i0  As Single)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i Id\lang1033\f1 Control\lang1046\f0\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  \lang1033\f1 control that own the title bar where the user presses a mouse button over.\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\tab\tab\tab For other parts, see reference for Mouse\lang1033\f1 Down\lang1046\f0  event in MSDN\lang1033\f1  Library\lang1046\f0 .\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\lang1033\f1\par
+\pard\fi-360\li360\tx360 17\lang1046\f0 .\tab\lang1033\b\f1 TitleBarMouseMove\lang1046\f0\par
+\b0\tab Occurs when the user moves \lang1033\f1 a\lang1046\f0  mouse over a \lang1033\f1 control title bar\lang1046\f0  without\lang1033\f1  \lang1046\f0 moving the \lang1033\f1 control\lang1046\f0 .\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterMouseMove\lang1046\f0 (ByVal \i Id\lang1033\f1 Control\lang1046\i0\f0  As Long, \lang1033\f1 ByVal \i Button\i0  As Integer, \lang1046\f0 ByVal \i Shift\i0  As Integer, ByVal \i X\i0  As Single, ByVal \i Y\i0  As Single)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i Id\lang1033\f1 Control\lang1046\f0\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  \lang1033\f1 control that own the title bar where the user moves a mouse over.\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\tab\tab\tab For other parts, see reference for Mouse\lang1033\f1 Down\lang1046\f0  event in MSDN\lang1033\f1  Library\lang1046\f0 .\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\lang1033\f1\par
+\pard\fi-360\li360\tx360 18\lang1046\f0 .\tab\lang1033\b\f1 TitleBarMouseUp\lang1046\f0\par
+\b0\tab Occurs when the user releases a mouse button over a \lang1033\f1 control title bar \lang1046\f0 without previously moving the \lang1033\f1 control.\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\par
+\tab Syntax\tab :\tab Private Sub \i Object\i0 _\lang1033\f1 SplitterMouseUp\lang1046\f0 (ByVal \i Id\lang1033\f1 Control\lang1046\i0\f0  As Long, \lang1033\f1 ByVal \i Button\i0  As Integer, \lang1046\f0 ByVal \i Shift\i0  As Integer, ByVal \i X\i0  As Single, ByVal \i Y\i0  As Single)\b\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\b0\tab Parts\tab :\tab\i Object\tab\i0 -\tab An object expression that evaluates to a VB \lang1033\f1 Control Manager\lang1046\f0  object.\par
+\tab\tab  \tab\i Id\lang1033\f1 Control\lang1046\f0\tab -\tab\i0 A value that uniquely identifies \lang1033\f1 the\lang1046\f0  \lang1033\f1 control that own the title bar where the user releases a mouse button over.\lang1046\f0\par
+\pard\fi-1260\li1260\tx360\tx1080\tx1260\tab\tab\tab For other parts, see reference for Mouse\lang1033\f1 Down\lang1046\f0  event in MSDN\lang1033\f1  Library\lang1046\f0 .\par
+\pard\fi-2340\li2340\tx360\tx1080\tx1260\tx2160\tx2340\lang1033\f1\par
+\pard\cf5\b Controls Collection\par
+\cf4\b0 A \b Controls\b0  collection in VB Control Manager is a collection whose elements represent each virtual control in a Control Manager object. See the description of \b Control\b0  object in the next section below for the explanation of virtual controls.\par
+The \b Controls\b0  collection has two properties: \b Count\b0  that specifies the number of elements in the collection and \b Item\b0  that returns a member of the collection. See reference for Collection Object in MSDN Library for the description of how to use the properties.\par
+The \b Controls\b0  collection also has one method, \b IsExist\b0 , to determine whether certain index that uniquely identifies a virtual control exist in the collection.\lang1046\f0\par
+\cf5\lang1033\b\f1\par
+Control Object\par
+\cf4\b0 A \b Control\b0  object in VB Control Manager is a virtual control used to represent a real control (like TextBox control, Button control, etc.).\par
+Instead of using real controls properties directly, VB Control Manager saves the necessary properties plus several custom properties in virtual controls. Furthermore, VB Control Manager works with these virtual controls to manipulate its position, size, etc. and then write it back to the real controls.\par
+\par
+The \b Control\b0  object has 20 properties as follows:\par
+\par
+\pard\fi-360\li360\tx360\lang1046\f0 1.\tab\lang1033\b\f1 Bottom \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the distance between the internal bottom edge of the\lang1033\f1  virtual \lang1046\f0 control and the top edge of \lang1033\f1 the related \lang1046\f0 Control Manager \lang1033\f1 object\lang1046\f0 .\par
+\par
+\lang1033\f1 2\lang1046\f0 .\tab\lang1033\b\f1 Closed \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns a value that determines whether the \lang1033\f1 virtual \lang1046\f0 control is closed.\par
+\par
+\lang1033\f1 3\lang1046\f0 .\tab\lang1033\b\f1 Height \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the height of the \lang1033\f1 virtual \lang1046\f0 control.\par
+\par
+\lang1033\f1 4\lang1046\f0 .\tab\lang1033\b\f1 Id \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns \lang1033\f1 a value that uniquely identifies\lang1046\f0  the \lang1033\f1 virtual \lang1046\f0 control.\par
+\par
+\lang1033\f1 5\lang1046\f0 .\tab\lang1033\b\f1 IdSplBottom \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns \lang1033\f1 a value that uniquely identifies\lang1046\f0  the \lang1033\f1 virtual splitter which its movement will change the value of the virtual control's Bottom property.\lang1046\f0\par
+\par
+\lang1033\f1 6\lang1046\f0 .\tab\lang1033\b\f1 IdSplLeft \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns \lang1033\f1 a value that uniquely identifies\lang1046\f0  the \lang1033\f1 virtual splitter which its movement will change the value of the virtual control's Left property.\lang1046\f0\par
+\par
+\lang1033\f1 7\lang1046\f0 .\tab\lang1033\b\f1 IdSplRight \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns \lang1033\f1 a value that uniquely identifies\lang1046\f0  the \lang1033\f1 virtual splitter which its movement will change the value of the virtual control's Right property.\lang1046\f0\par
+\par
+\lang1033\f1 8\lang1046\f0 .\tab\lang1033\b\f1 IdSplTop \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns \lang1033\f1 a value that uniquely identifies\lang1046\f0  the \lang1033\f1 virtual splitter which its movement will change the value of the virtual control's Top property.\lang1046\f0\par
+\par
+\lang1033\f1 9\lang1046\f0 .\tab\lang1033\b\f1 Left \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the distance between the internal \lang1033\f1 left\lang1046\f0  edge of the\lang1033\f1  virtual \lang1046\f0 control and the \lang1033\f1 left\lang1046\f0  edge of \lang1033\f1 the related \lang1046\f0 Control Manager \lang1033\f1 object\lang1046\f0 .\par
+\par
+\lang1033\f1 10\lang1046\f0 .\tab\lang1033\b\f1 MinHeight \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the minimum height of the virtual control.\par
+\par
+\lang1033\f1 11\lang1046\f0 .\tab\lang1033\b\f1 MinWidth \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the minimum \lang1033\f1 width\lang1046\f0  of the virtual control.\par
+\par
+\lang1033\f1 12\lang1046\f0 .\tab\lang1033\b\f1 Name \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the name of the real control \lang1033\f1 that\lang1046\f0  th\lang1033\f1 e\lang1046\f0  virtual control\lang1033\f1  \lang1046\f0 represents.\par
+\par
+\lang1033\f1 13\lang1046\f0 .\tab\lang1033\b\f1 Right \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the distance between the internal \lang1033\f1 right\lang1046\f0  edge of the\lang1033\f1  virtual \lang1046\f0 control and the \lang1033\f1 left\lang1046\f0  edge of \lang1033\f1 the related \lang1046\f0 Control Manager \lang1033\f1 object\lang1046\f0 .\par
+\par
+1\lang1033\f1 4\lang1046\f0 .\tab\lang1033\b\f1 TitleBar_CloseVisible\lang1046\b0\f0\par
+\tab\lang1033\f1 Returns/s\lang1046\f0 ets a value that determines whether a close button in \lang1033\f1 the virtual\lang1046\f0  \lang1033\f1 control \lang1046\f0 title\lang1033\f1  \lang1046\f0 bar is visible\lang1033\f1 .\lang1046\f0\par
+\par
+1\lang1033\f1 5\lang1046\f0 .\tab\lang1033\b\f1 TitleBar_Height \b0\i (read-only)\lang1046\i0\f0\par
+\tab\lang1033\f1 Returns the height of the virtual control title bars.\lang1046\f0\par
+\par
+1\lang1033\f1 6\lang1046\f0 .\tab\lang1033\b\f1 TitleBar_Visible\lang1046\b0\f0\par
+\tab\lang1033\f1 Returns/sets a value that determines whether the virtual control title bar is visible.\lang1046\f0\par
+\par
+\lang1033\f1 17\lang1046\f0 .\tab\lang1033\b\f1 Top \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the distance between the internal \lang1033\f1 top\lang1046\f0  edge of the\lang1033\f1  virtual \lang1046\f0 control and the \lang1033\f1 top\lang1046\f0  edge of \lang1033\f1 the related \lang1046\f0 Control Manager \lang1033\f1 object\lang1046\f0 .\par
+\par
+\lang1033\f1 18\lang1046\f0 .\tab\lang1033\b\f1 Width \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 width\lang1046\f0  of the \lang1033\f1 virtual \lang1046\f0 control.\par
+\par
+\lang1033\f1 19\lang1046\f0 .\tab\lang1033\b\f1 Xc \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the x-coordinate of the \lang1033\f1 virtual \lang1046\f0 control center.\par
+\par
+\lang1033\f1 20\lang1046\f0 .\tab\lang1033\b\f1 Yc \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 y\lang1046\f0 -coordinate of the \lang1033\f1 virtual \lang1046\f0 control center.\par
+\pard\cf5\lang1033\b\f1\par
+Splitters Collection\par
+\cf4\b0 A \b Splitters\b0  collection in VB Control Manager is a collection whose elements represent each virtual splitter in a Control Manager object. See the description of \b Splitter\b0  object in the next section below for the explanation of virtual splitters.\par
+The \b Splitters\b0  collection has two properties: \b Count\b0  that specifies the number of elements in the collection and \b Item\b0  that returns a member of the collection. See reference for Collection Object in MSDN Library for the description of how to use the properties.\par
+The \b Controls\b0  collection also has one method, \b IsExist\b0 , to determine whether certain index that uniquely identifies a virtual splitter exist in the collection.\lang1046\f0\par
+\cf5\lang1033\b\f1\par
+Splitter Object\par
+\cf4\b0 A \b Splitter\b0  object in VB Control Manager is a virtual splitter used to represent a real splitter.\par
+VB Control Manager uses PictureBox control as a splitter. Instead of using the PictureBox properties directly, VB Control Manager saves the necessary properties plus several custom properties in virtual splitters. Furthermore, VB Control Manager works with these virtual splitters to manipulate its position, size, etc. and then write it back to the PictureBox controls.\par
+\par
+The \b Splitter\b0  object has 27 properties as follows:\par
+\par
+\pard\fi-360\li360\tx360\lang1046\f0 1.\tab\b ActiveColor\par
+\b0\tab Returns/sets the background color used to display the splitter when the user moves it in none live update mode.\par
+\par
+2.\tab\b BackColor\par
+\b0\tab Returns/sets the background color used to display \lang1033\f1 the \lang1046\f0 splitter.\par
+\par
+\lang1033\f1 3\lang1046\f0 .\tab\lang1033\b\f1 Bottom \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the distance between the internal bottom edge of the\lang1033\f1  virtual splitter\lang1046\f0  and the top edge of \lang1033\f1 the related \lang1046\f0 Control Manager \lang1033\f1 object\lang1046\f0 .\par
+\par
+\lang1033\f1 4\lang1046\f0 .\tab\b ClipCursor\b0\par
+\tab Returns/sets a value that determines whether the mouse pointer is confined to \lang1033\f1 the virtual splitter\lang1046\f0  minimum and maximum x- and y-coordinate when the user moves \lang1033\f1 the\lang1046\f0  splitter.\par
+\par
+\lang1033\f1 5\lang1046\f0 .\tab\b Enable\b0\par
+\tab Returns/sets a value that determines whether \lang1033\f1 the \lang1046\f0 splitter \lang1033\f1 is\lang1046\f0  movable.\par
+\par
+\lang1033\f1 6\lang1046\f0 .\tab\lang1033\b\f1 Height \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the height of the \lang1033\f1 virtual splitter\lang1046\f0 .\par
+\par
+\lang1033\f1 7\lang1046\f0 .\tab\lang1033\b\f1 Id \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns \lang1033\f1 a value that uniquely identifies\lang1046\f0  the \lang1033\f1 virtual splitter\lang1046\f0 .\par
+\par
+\lang1033\f1 8\lang1046\f0 .\tab\lang1033\b\f1 IdsCtlBottom \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 Id collection\lang1046\f0  of \lang1033\f1 all\lang1046\f0  \lang1033\f1 virtual \lang1046\f0 controls which are effected by the\lang1033\f1  virtual \lang1046\f0 splitter\lang1033\f1 's\lang1046\f0  down-mo\lang1033\f1 vement.\par
+\lang1046\f0\par
+\lang1033\f1 9\lang1046\f0 .\tab\lang1033\b\f1 IdsCtlLeft \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 Id collection\lang1046\f0  of \lang1033\f1 all\lang1046\f0  \lang1033\f1 virtual \lang1046\f0 controls which are effected by the\lang1033\f1  virtual \lang1046\f0 splitter\lang1033\f1 's\lang1046\f0  \lang1033\f1 left\lang1046\f0 -mo\lang1033\f1 vement.\par
+\lang1046\f0\par
+\lang1033\f1 10\lang1046\f0 .\tab\lang1033\b\f1 IdsCtlRight \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 Id collection\lang1046\f0  of \lang1033\f1 all\lang1046\f0  \lang1033\f1 virtual \lang1046\f0 controls which are effected by the\lang1033\f1  virtual \lang1046\f0 splitter\lang1033\f1 's\lang1046\f0  \lang1033\f1 right\lang1046\f0 -mo\lang1033\f1 vement.\par
+\lang1046\f0\par
+\lang1033\f1 11\lang1046\f0 .\tab\lang1033\b\f1 IdsCtlTop \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 Id collection\lang1046\f0  of \lang1033\f1 all\lang1046\f0  \lang1033\f1 virtual \lang1046\f0 controls which are effected by the\lang1033\f1  virtual \lang1046\f0 splitter\lang1033\f1 's\lang1046\f0  \lang1033\f1 up\lang1046\f0 -mo\lang1033\f1 vement.\par
+\lang1046\f0\par
+\lang1033\f1 12\lang1046\f0 .\tab\lang1033\b\f1 IdsSplBottom \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 Id collection\lang1046\f0  of \lang1033\f1 all\lang1046\f0  \lang1033\f1 virtual splitters\lang1046\f0  which are effected by the\lang1033\f1  virtual \lang1046\f0 splitter\lang1033\f1 's\lang1046\f0  down-mo\lang1033\f1 vement.\par
+\lang1046\f0\par
+\lang1033\f1 13\lang1046\f0 .\tab\lang1033\b\f1 IdsSplLeft \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 Id collection\lang1046\f0  of \lang1033\f1 all virtual splitters\lang1046\f0  which are effected by the\lang1033\f1  virtual \lang1046\f0 splitter\lang1033\f1 's\lang1046\f0  \lang1033\f1 left\lang1046\f0 -mo\lang1033\f1 vement.\par
+\lang1046\f0\par
+\lang1033\f1 14\lang1046\f0 .\tab\lang1033\b\f1 IdsSplRight \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 Id collection\lang1046\f0  of \lang1033\f1 all\lang1046\f0  \lang1033\f1 virtual splitters\lang1046\f0  which are effected by the\lang1033\f1  virtual \lang1046\f0 splitter\lang1033\f1 's\lang1046\f0  \lang1033\f1 right\lang1046\f0 -mo\lang1033\f1 vement.\par
+\lang1046\f0\par
+\lang1033\f1 15\lang1046\f0 .\tab\lang1033\b\f1 IdsSplTop \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 Id collection\lang1046\f0  of \lang1033\f1 all\lang1046\f0  \lang1033\f1 virtual splitters\lang1046\f0  which are effected by the\lang1033\f1  virtual \lang1046\f0 splitter\lang1033\f1 's\lang1046\f0  \lang1033\f1 up\lang1046\f0 -mo\lang1033\f1 vement.\par
+\lang1046\f0\par
+\lang1033\f1 16\lang1046\f0 .\tab\lang1033\b\f1 Left \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the distance between the internal \lang1033\f1 left\lang1046\f0  edge of the\lang1033\f1  virtual splitter\lang1046\f0  and the \lang1033\f1 left\lang1046\f0  edge of \lang1033\f1 the related \lang1046\f0 Control Manager \lang1033\f1 object\lang1046\f0 .\par
+\par
+\lang1033\f1 17\lang1046\f0 .\tab\b LiveUpdate\b0\par
+\tab Returns/sets a value that determines whether the controls should be resized as \lang1033\f1 the\lang1046\f0  splitter is moved.\par
+\par
+\lang1033\f1 18\lang1046\f0 .\tab\lang1033\b\f1 MaxXc \b0\i (read-only)\lang1046\i0\f0\par
+\tab Returns the maximum x-coordinate of the \lang1033\f1 virtual \lang1046\f0 splitter\lang1033\f1 .\lang1046\f0\par
+\par
+\lang1033\f1 19\lang1046\f0 .\tab\lang1033\b\f1 MaxYc \b0\i (read-only)\lang1046\i0\f0\par
+\tab Returns the maximum \lang1033\f1 y\lang1046\f0 -coordinate of the \lang1033\f1 virtual \lang1046\f0 splitter\lang1033\f1 .\lang1046\f0\par
+\par
+\lang1033\f1 20\lang1046\f0 .\tab\lang1033\b\f1 MinXc \b0\i (read-only)\lang1046\i0\f0\par
+\tab Returns the \lang1033\f1 minimum\lang1046\f0  x-coordinate of the \lang1033\f1 virtual \lang1046\f0 splitter\lang1033\f1 .\lang1046\f0\par
+\par
+\lang1033\f1 21\lang1046\f0 .\tab\lang1033\b\f1 MinYc \b0\i (read-only)\lang1046\i0\f0\par
+\tab Returns the \lang1033\f1 minimum\lang1046\f0  \lang1033\f1 y\lang1046\f0 -coordinate of the \lang1033\f1 virtual \lang1046\f0 splitter\lang1033\f1 .\lang1046\f0\par
+\par
+\lang1033\f1 22\lang1046\f0 .\tab\lang1033\b\f1 Orientation \b0\i (read-only)\lang1046\i0\f0\par
+\tab Returns the \lang1033\f1 virtual \lang1046\f0 splitter mo\lang1033\f1 vement\lang1046\f0  \lang1033\f1 direction.\lang1046\f0\par
+\par
+\lang1033\f1 23\lang1046\f0 .\tab\lang1033\b\f1 Right \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the distance between the internal \lang1033\f1 right\lang1046\f0  edge of the\lang1033\f1  virtual splitter\lang1046\f0  and the \lang1033\f1 left\lang1046\f0  edge of \lang1033\f1 the related \lang1046\f0 Control Manager \lang1033\f1 object\lang1046\f0 .\par
+\par
+\lang1033\f1 24\lang1046\f0 .\tab\lang1033\b\f1 Top \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the distance between the internal \lang1033\f1 top\lang1046\f0  edge of the\lang1033\f1  virtual splitter\lang1046\f0  and the \lang1033\f1 top\lang1046\f0  edge of \lang1033\f1 the related \lang1046\f0 Control Manager \lang1033\f1 object\lang1046\f0 .\par
+\lang1033\f1\par
+25\lang1046\f0 .\tab\lang1033\b\f1 Width \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 width\lang1046\f0  of the \lang1033\f1 virtual splitter\lang1046\f0 .\par
+\par
+\lang1033\f1 26\lang1046\f0 .\tab\lang1033\b\f1 Xc \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the x-coordinate of the \lang1033\f1 virtual splitter\lang1046\f0  center.\par
+\par
+\lang1033\f1 27\lang1046\f0 .\tab\lang1033\b\f1 Yc \b0\i (read-only)\lang1046\b\i0\f0\par
+\b0\tab Returns the \lang1033\f1 y\lang1046\f0 -coordinate of the \lang1033\f1 virtual splitter\lang1046\f0  center.\par
+\par
+\pard\cf5\b Use and Distribution\par
+\pard\fi-360\li360\tx360\cf4\lang1033\f2\bullet\b0\tab\lang1046\f0 This control is freeware and opensource. \par
+\lang1033\b\f2\bullet\b0\tab\lang1046\f0 You may freely modify the source only to be used on your own program.\par
+\lang1033\b\f2\bullet\b0\tab\lang1046\f0 You may NOT modify the source and/or publish it as your work without permission from the author.\par
+\lang1033\b\f2\bullet\b0\tab\lang1046\f0 The author provides the control "as is" with no warranty of any kind.\par
+\pard\cf5\b\par
+The Author\par
+\cf4\b0 Theo Zacharias (theo_yz@yahoo.com)\par
+\par
+}
+ 
